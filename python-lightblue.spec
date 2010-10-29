@@ -1,6 +1,6 @@
 Name:    python-lightblue
 Version: 0.4
-Release: %mkrel 1
+Release: %mkrel 2
 
 Summary: A cross-platform Python Bluetooth API
 Group:   Development/Python
