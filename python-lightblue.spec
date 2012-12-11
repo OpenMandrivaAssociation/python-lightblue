@@ -1,20 +1,15 @@
 Name:    python-lightblue
 Version: 0.4
-Release: %mkrel 2
-
+Release: 3
 Summary: A cross-platform Python Bluetooth API
 Group:   Development/Python
-
 License:   GPLv3
 URL:       http://lightblue.sourceforge.net
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-
 Source0: lightblue-%{version}.tar.gz
-
 BuildRequires: python-devel
 BuildRequires: python-pybluez
 BuildRequires: openobex
-BuildRequires: libbluez-devel
+BuildRequires: pkgconfig(bluez)
 BuildRequires: libopenobex-devel
 
 
@@ -29,15 +24,22 @@ access to Bluetooth operations.
 python setup.py build
 
 %install
-rm -rf %{buildroot}
 python setup.py install --root=%{buildroot}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{py_platsitedir}/lightblue
 %{py_platsitedir}/_lightblueobex.so
 %{py_platsitedir}/_lightblueutil.so
 %{py_platsitedir}/*.egg-info
+
+
+%changelog
+* Fri Oct 29 2010 Michael Scherer <misc@mandriva.org> 0.4-2mdv2011.0
++ Revision: 590005
+- rebuild for python 2.7
+
+* Tue Jul 27 2010 Paulo Ricardo Zanoni <pzanoni@mandriva.com> 0.4-1mdv2011.0
++ Revision: 561920
+- import python-lightblue
+
+
