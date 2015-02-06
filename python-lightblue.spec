@@ -1,6 +1,6 @@
 Name:    python-lightblue
 Version: 0.4
-Release: 3
+Release: 4
 Summary: A cross-platform Python Bluetooth API
 Group:   Development/Python
 License:   GPLv3
