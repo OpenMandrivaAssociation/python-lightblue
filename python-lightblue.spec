@@ -4,7 +4,7 @@ Release: 4
 Summary: A cross-platform Python Bluetooth API
 Group:   Development/Python
 License:   GPLv3
-URL:       http://lightblue.sourceforge.net
+URL:       https://lightblue.sourceforge.net
 Source0: lightblue-%{version}.tar.gz
 BuildRequires: python-devel
 BuildRequires: python-pybluez
